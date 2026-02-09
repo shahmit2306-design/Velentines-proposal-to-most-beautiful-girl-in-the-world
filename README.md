@@ -129,7 +129,9 @@
 
 <div id="yay" class="container hidden">
   <h1>Yay! ❤️</h1>
-  <img src="https://github.com/shahmit2306-design/Velentines-proposal-to-most-beautiful-girl-in-the-world/blob/main/WhatsApp%20Video%202026-02-09%20at%202.48.46%20PM%20(1).gif" alt="Yay GIF">
+  <img 
+  src="https://raw.githubusercontent.com/shahmit2306-design/Velentines-proposal-to-most-beautiful-girl-in-the-world/main/WhatsApp%20Video%202026-02-09%20at%202.48.46%20PM%20(1).gif" 
+  alt="Yay GIF">
 </div>
 
 <script>
