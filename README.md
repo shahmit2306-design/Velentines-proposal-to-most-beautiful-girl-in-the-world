@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Valentine ❤️</title>
+
+<!-- PRELOAD GIF -->
+<link rel="preload" as="image" href="https://raw.githubusercontent.com/shahmit2306-design/Velentines-proposal-to-most-beautiful-girl-in-the-world/main/WhatsApp%20Video%202026-02-09%20at%202.48.46%20PM%20(1).gif">
 
 <style>
   body {
@@ -20,7 +24,6 @@
     padding: 24px;
   }
 
-  /* BIG EMOJI ON TOP */
   .top-emoji {
     font-size: 5rem;
     margin-bottom: 14px;
@@ -59,7 +62,6 @@
     position: relative;
   }
 
-  /* NO button movement */
   @keyframes runAway {
     0%   { transform: translate(0,0); }
     25%  { transform: translate(40vw, -20vh); }
@@ -76,7 +78,6 @@
     font-size: 1.1rem;
   }
 
-  /* YAY SCREEN */
   .hidden {
     display: none;
   }
@@ -86,13 +87,17 @@
     color: #ff3e8e;
   }
 
+  /* FIXED GIF VISIBILITY */
   #yay img {
     margin-top: 20px;
-    max-width: 90%;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 18px;
   }
 
-  /* HEARTS */
   .heart {
     position: fixed;
     bottom: -20px;
@@ -115,7 +120,7 @@
 <div id="ask" class="container">
   <div class="top-emoji">💖</div>
 
-  <h1>❤️ Mokshi, will you be my velentine? ❤️</h1>
+  <h1>❤️ Mokshi, will you be my valentine? ❤️</h1>
 
   <div class="buttons">
     <div id="yes" class="btn">Yes ❤️</div>
@@ -130,8 +135,9 @@
 <div id="yay" class="container hidden">
   <h1>Yay! ❤️</h1>
   <img 
-  src="https://raw.githubusercontent.com/shahmit2306-design/Velentines-proposal-to-most-beautiful-girl-in-the-world/main/WhatsApp%20Video%202026-02-09%20at%202.48.46%20PM%20(1).gif" 
-  alt="Yay GIF">
+    src="https://raw.githubusercontent.com/shahmit2306-design/Velentines-proposal-to-most-beautiful-girl-in-the-world/main/WhatsApp%20Video%202026-02-09%20at%202.48.46%20PM%20(1).gif"
+    alt="Yay GIF"
+    loading="eager">
 </div>
 
 <script>
@@ -153,6 +159,10 @@
   yesBtn.onclick = () => {
     ask.classList.add("hidden");
     yay.classList.remove("hidden");
+
+    /* FORCE REPAINT */
+    yay.offsetHeight;
+
     setInterval(createHeart, 250);
   };
 
