@@ -1,5 +1,3 @@
-# Velentines-proposal-to-most-beautiful-girl-in-the-world
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
